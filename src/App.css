@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color:rgb(42,39,34);
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +37,80 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.top {
+  display:flex;
+  flex-flow: row;
+  justify-content:center;
+  color: white;
+  background-color: rgb(42,39,34);
+}
+
+.top img {
+  height: 80px;
+}
+
+.top h1 {
+  margin-left: 10px;
+}
+
+.stack {
+  display:flex;
+  flex-flow:column;
+  justify-content: flex-start;
+}
+
+.stack p {
+  margin-top: 0;
+  padding-bottom: 1em;
+  background-color: rgb(42,39,34);
+  color: rgb(255, 234, 0);
+  font-style: italic;
+  font-size: .8em;
+  border-bottom: .5px solid rgb(148, 148, 148);
+}
+
+.display {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.card {
+  border: 1px solid white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+}
+.card h3 {
+  margin: 0;
+}
+.card div {
+  font-size: .6em;
+}
+
+.links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.links * {
+  padding: 0;
+  padding-bottom: 1em;
+  margin: 0;
+  color: white;
+}
+
+.links p {
+  font-style: italic;
+}
+
+.links div {
+  cursor: pointer;
+  font-weight: bold;
 }
