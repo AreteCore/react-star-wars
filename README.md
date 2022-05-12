@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+# Star Wars Ships
+This is a pretty cool little react app that hits the star wars API. It uses the page information returned by the API to make the page links work.
+
+It has three components:
+ - `TopBar`
+ - `Links`
+ - `Display`
+
+Wow, amazing. I wrote all the CSS by hand. It's looking pretty cool.
+
+Here's a screenshot:
+
+![screenshot](./img/starwarsships.png)
+
+# -----------------------------------
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

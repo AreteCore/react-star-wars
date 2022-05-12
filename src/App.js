@@ -8,21 +8,22 @@ function App() {
 
   const [starships, setStarships] = useState(null)
 
+  //accepts a url param so it can be called by onClick when user wants page 2
   async function getStarships(url) {
-    console.log(url)
-    let response = await fetch(
-       url
-    )
+    // console.log(url)
+    let response = await fetch(url)
     response = await response.json()
-    console.log("response obj", response)
+    // console.log("response obj", response)
     // let results = response.results
     // console.log("resultsarray", results)
     setStarships(response)
-    await console.log("starships variable", starships)
+    // await console.log("starships variable", starships)
   }
 
+  //runs the default url at pageload
   useEffect(() => { getStarships("https://swapi.dev/api/starships/") }, [])
 
+  //makes sure there's something to parse
   if (starships) {
   return (
     <div className="App">
@@ -31,7 +32,7 @@ function App() {
       <Display starships={starships} />
     </div>
   );
-      } else {return <h3>HOLD UP, JEDI</h3>}
+      } else {return <h1>HOLD ON, JEDI</h1>}
 }
 
 export default App;

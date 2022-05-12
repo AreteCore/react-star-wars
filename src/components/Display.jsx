@@ -1,21 +1,21 @@
-export default function ({starships}) {
+export default function ({ starships }) {
 
-    
 
-return <div className="display">
-        { starships.results.map((ship, index) => {
-          return (
-            <div className="card" key={index}>
-              <h2>{ship.name}</h2>
-              <div>Manufactured by:</div>
-              <div>{ship.manufacturer}</div>
-              <div>Cost: {ship.cost_in_credits}</div>
-              <div>HyperDrive Rating: {ship.hyperdrive_rating}</div>
-              </div>
-          )
-        })
-        }
-      </div>
+
+  return <div className="display">
+    {starships.results.map((ship, index) => {
+      return (
+        <div className="card" key={index}>
+          <h2>{ship.name}</h2>
+          <div>Manufactured by:</div>
+          <div>{ship.manufacturer}</div>
+          <div>Cost: {ship.cost_in_credits}</div>
+          <div>HyperDrive Rating: {ship.hyperdrive_rating}</div>
+        </div>
+      )
+    })
+    }
+  </div>
 }
 
 // example object 
