@@ -1,5 +1,9 @@
 import './App.css';
 import { useState, useEffect } from "react"
+import Links from './components/Links';
+import TopBar from './components/TopBar'
+import Display from './components/Display'
+
 function App() {
 
   const [starships, setStarships] = useState(null)
@@ -22,28 +26,9 @@ function App() {
   if (starships) {
   return (
     <div className="App">
-      <div className="stack">
-        <div className="top">
-          <img src="https://i.pinimg.com/474x/49/79/8b/49798b6dc0063851ebf6b36ada034614--tee-shirts-art-ideas.jpg" />
-          <h1>STARWARS SHIPS!!</h1>
-        </div>
-        <p>Die, you rebel scum.</p>
-      </div>
-      <div className="links">
-        {(!!starships.previous) ? <div onClick={() => {getStarships(starships.previous)}}>Previous Page</div> : <p>You are on the first page of results</p>}
-        {(!!starships.next) ? <div onClick={() => {getStarships(starships.next)}}>Next Page</div> : <p>You are on the last page of results</p>}
-      </div>
-      <div className="display">
-        { starships.results.map((ship, index) => {
-          return (
-            <div className="card" key={index}>
-              <h3>{ship.name}</h3>
-              <div>{ship.manufacturer}</div>
-              </div>
-          )
-        })
-        }
-      </div>
+      <TopBar />
+      <Links starships={starships} getStarships={getStarships}/>
+      <Display starships={starships} />
     </div>
   );
       } else {return <h3>HOLD UP, JEDI</h3>}
