@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=News+Cycle&family=Teko:wght@700&display=swap');
+
 .App {
   text-align: center;
-  background-color:rgb(42,39,34);
+  background-color: rgb(42, 39, 34);
+  background-image: url("https://i.imgur.com/xiw9UXv.jpeg")
 }
 
 
 
 .top {
-  display:flex;
+  display: flex;
   flex-flow: row;
-  justify-content:center;
+  justify-content: center;
   color: white;
-  background-color: rgb(42,39,34);
+  background-color: rgba(42, 39, 34, 1);
+  gap: 40px;
+  align-items: center;
 }
 
 .top img {
@@ -19,21 +23,23 @@
 }
 
 .top h1 {
-font-family: 'Teko', sans-serif;
-
-  margin-left: 10px;
+  font-family: 'Teko', sans-serif;
+  font-size: 2.8rem;
+  margin: .5em 0;
+  position: relative;
+  top: .1em;
 }
 
 .stack {
-  display:flex;
-  flex-flow:column;
+  display: flex;
+  flex-flow: column;
   justify-content: flex-start;
 }
 
 .stack p {
   margin-top: 0;
   padding-bottom: 1em;
-  background-color: rgb(42,39,34);
+  background-color: rgb(42, 39, 34);
   color: rgb(255, 234, 0);
   font-style: italic;
   font-size: .8em;
@@ -45,27 +51,32 @@ font-family: 'Teko', sans-serif;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 1em;
   padding: 0 5em;
+  background-color: rgba(42, 39, 34, .5)
 }
 
 .card {
-  border: 1px solid white;
+  border: 1px solid rgb(93, 93, 93);
+  border-radius: 6px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   padding: .5em;
+  background-color: rgba(42, 39, 34, .7)
 }
+
 .card h2 {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
 }
+
 .card div {
   font-size: .8em;
   margin-top: .5em;
-font-family: 'News Cycle', sans-serif;
+  font-family: 'News Cycle', sans-serif;
 
 }
 
@@ -78,16 +89,23 @@ font-family: 'News Cycle', sans-serif;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  color: rgb(202,15,46);
+  font-size:1.1rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
 }
+
 .links * {
   padding: 0;
-  padding-bottom: 1em;
+  padding-bottom: .8em;
   margin: 0;
-  color: white;
+  /* color: white; */
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 .links p {
-  font-style: italic;
+  font-style:italic;
+  font-weight:500;
 }
 
 .links div {
